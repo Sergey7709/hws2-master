@@ -20,7 +20,7 @@
     width: 47.21px;
     height: 44.78px;
     margin-top: 12px;
-
+    align-self: flex-end;
 }
 
 .friendText {
@@ -73,6 +73,12 @@
     padding-right: 10px;
     padding-top: 5px;
     margin-left: 25px;
+}
+
+.friendMessageText p {
+    word-break: break-all;
+    white-space: normal;
+    max-width: 500px
 }
 
 .friendTime {

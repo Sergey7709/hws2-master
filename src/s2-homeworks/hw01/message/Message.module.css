@@ -24,7 +24,7 @@
     height: 44.78px;
     border-radius: 50px;
     margin-top: 12px;
-
+    align-self: flex-end;
 }
 
 .text {
