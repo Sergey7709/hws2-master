@@ -43,7 +43,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     const [error, setError] = useState<string>('') // need to fix any
 
     const setNameCallback = (e: React.ChangeEvent<HTMLInputElement>) => { // need to fix any
-        setName('some name') // need to fix
+        setName(e.currentTarget.value) // need to fix!!!!!!
 
         error && setError('')
     }
@@ -55,13 +55,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
         pureOnBlur(name, setError)
     }
 
-    const onEnter = (e: any) => {
+    const onEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
         pureOnEnter(e, addUser)
     }// уточнить почему в условиях задачи оставлен тип (e: any), поменял сам на React.KeyboardEvent
 
-    const totalUsers = users.length // need to fix
-    const lastUserName = (users[users.length - 1].name) // need to fix
-
+    const totalUsers = users?.length // need to fix
+    const lastUserName = (users[users?.length - 1]?.name) // need to fix
     return (
         <Greeting
             name={name}

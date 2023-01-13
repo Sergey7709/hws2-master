@@ -6,7 +6,7 @@ type GreetingPropsType = {
     setNameCallback: (e: React.ChangeEvent<HTMLInputElement>) => void // need to fix any
     addUser:  () => void // need to fix any
     onBlur: () => void  // need to fix any
-    onEnter: (e: React.KeyboardEvent) => void // need to fix any
+    onEnter: (e: React.KeyboardEvent<HTMLInputElement>) => void // need to fix any
     error: string // need to fix any
     totalUsers: number // need to fix any
     lastUserName?: string // need to fix any
@@ -35,7 +35,6 @@ const Greeting: React.FC<GreetingPropsType> = (
                     {totalUsers}
                 </span>
             </div>
-
             <div className={s.inputAndButtonContainer}>
                 <div>
                     <input
