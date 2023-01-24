@@ -2,6 +2,7 @@
 }
 
 .disabled {
+
 }
 
 .secondary {
@@ -33,4 +34,6 @@
 }
 
 .button:disabled {
+    opacity: 1;
+    color: #7db9e8;
 }
