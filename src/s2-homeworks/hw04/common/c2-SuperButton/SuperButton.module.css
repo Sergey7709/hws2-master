@@ -6,18 +6,21 @@
 }
 
 .secondary {
+    color: indigo;
 }
 
 .default {
 }
 
 .red {
+      color: #cc0000;
 }
 
 .default:hover {
 }
 
 .red:hover {
+
 }
 
 .secondary:hover {
@@ -35,5 +38,5 @@
 
 .button:disabled {
     opacity: 1;
-    color: #7db9e8;
+    color: gray;
 }
