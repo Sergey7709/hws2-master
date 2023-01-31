@@ -1,11 +1,14 @@
 .buttonContainer {
+    margin-top: 20px;
     display: flex;
     gap: 24px;
     margin-bottom: 32px;
+
 }
 
 .all {
     --color: #06c;
+
 }
 
 .low {
@@ -21,6 +24,7 @@
 }
 
 .button {
+
     padding: 5px 15px;
 
     background: transparent;

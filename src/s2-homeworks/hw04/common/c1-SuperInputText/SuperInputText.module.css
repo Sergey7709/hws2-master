@@ -1,4 +1,5 @@
 .input:focus {
+
 }
 
 .input {
@@ -8,12 +9,14 @@
 }
 
 .superInput {
+
 }
 
 .errorInput {
 }
 
 .errorInput:focus {
+
 }
 
 .error {

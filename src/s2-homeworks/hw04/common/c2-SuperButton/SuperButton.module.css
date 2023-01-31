@@ -1,4 +1,5 @@
 .button {
+
 }
 
 .disabled {
@@ -7,27 +8,35 @@
 
 .secondary {
     color: indigo;
+    background-color: greenyellow;
 }
 
 .default {
 }
 
 .red {
-      color: #cc0000;
+      color: #DDEEFF;
+    background-color: #cc0000;
 }
 
 .default:hover {
+    background-color: lightslategrey;
+    color: #212A34;
 }
 
 .red:hover {
+    background-color: red;
 
 }
 
 .secondary:hover {
+    color: #DDEEFF;
+    background-color: green;
 }
 
 
 .default:active {
+
 }
 
 .secondary:active {
