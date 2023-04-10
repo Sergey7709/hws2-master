@@ -2,10 +2,21 @@
 }
 
 .span {
+  display: inline-block;
+  height: 31px;
+  padding-top: 10px;
+  cursor: pointer;
+  color: dodgerblue;
 }
 
 .input {
+  background-color: aquamarine;
 }
 
 .pen {
+}
+
+s.buttonsContainer {
+  color: blue;
+  background-color: blueviolet;
 }
