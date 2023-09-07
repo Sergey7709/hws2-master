@@ -66,10 +66,14 @@ const HW15 = () => {
     // sendQuery(
     // setSearchParams(
     //
+    const search = Object.fromEntries(searchParams);
     setPage(newPage);
     setCount(newCount);
-    sendQuery({ page: newPage.toString(), count: newCount.toString() });
-    setSearchParams({ page: newPage.toString(), count: newCount.toString() });
+
+    const allQuery = { ...search, page: newPage + "", count: newCount + "" };
+
+    sendQuery(allQuery);
+    setSearchParams(allQuery);
   };
 
   const onChangeSort = (newSort: string) => {
@@ -79,10 +83,15 @@ const HW15 = () => {
     // sendQuery(
     // setSearchParams(
     //
+    const search = Object.fromEntries(searchParams);
+
     setSort(newSort);
     setPage(1);
-    sendQuery({ sort: newSort });
-    setSearchParams({ sort: newSort });
+
+    const allQuery = { ...search, page: "1", sort: newSort };
+
+    sendQuery(allQuery);
+    setSearchParams(allQuery);
   };
 
   useEffect(() => {
