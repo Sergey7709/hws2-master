@@ -1,8 +1,10 @@
 .input {
+  height: 36px;
 }
 
 .input:focus {
-  border: 2px solid blue;
+  border: 2px solid rgb(57, 57, 226);
+  border-radius: 2px;
 }
 
 .inputWrapper {

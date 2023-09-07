@@ -43,11 +43,20 @@ const HW15 = () => {
 
   const sendQuery = (params: any) => {
     setLoading(true);
-    getTechs(params).then((res) => {
-      // делает студент
-      // сохранить пришедшие данные
-      //
-    });
+    getTechs(params)
+      .then((res) => {
+        // делает студент
+        // сохранить пришедшие данные
+        //
+        if (res && res.data.techs) {
+          setTechs(res.data.techs);
+          setTotalCount(res.data.totalCount);
+          setLoading(false);
+        }
+      })
+      .catch((e) => {
+        alert(e.response?.data?.errorText || e.message);
+      });
   };
 
   const onChangePagination = (newPage: number, newCount: number) => {
@@ -57,6 +66,10 @@ const HW15 = () => {
     // sendQuery(
     // setSearchParams(
     //
+    setPage(newPage);
+    setCount(newCount);
+    sendQuery({ page: newPage.toString(), count: newCount.toString() });
+    setSearchParams({ page: newPage.toString(), count: newCount.toString() });
   };
 
   const onChangeSort = (newSort: string) => {
@@ -66,6 +79,10 @@ const HW15 = () => {
     // sendQuery(
     // setSearchParams(
     //
+    setSort(newSort);
+    setPage(1);
+    sendQuery({ sort: newSort });
+    setSearchParams({ sort: newSort });
   };
 
   useEffect(() => {
